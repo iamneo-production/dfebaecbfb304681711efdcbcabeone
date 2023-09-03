@@ -101,8 +101,29 @@
     scale(1);
 }
 .playboard.details{
-    padding:
+    padding:7px;
+    border-radius:5px;
+    background:#fff;
 }
+.play-board.players{
+    width:100%
+    display:flex;
+    position:relative;
+    justify-content:space-between;
+}
+.players span{
+    width:100%;
+    font-size:20px;
+    font-weight:500;
+    padding:10px 0;
+    z-index:2;
+    color:#56baed;
+    outline:none;
+    text-align:center;
+    cursor:default;
+    user-select:none;
+    transition:all 0.3s ease;
+
 
 
 
