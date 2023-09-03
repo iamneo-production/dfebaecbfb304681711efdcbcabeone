@@ -55,6 +55,30 @@
     font-weight:500;
     padding:10px 0;
     border:none;background:#56baed;
-    
+    border-radius:5px;
+    color:#fff;
+    outline:none;
+    cursor:pointer;
+    transition:all 0.3s ease;
+}
+.options button:hover,
+.btn button:hover{
+    transform:scale(0.96);
+}
+.playerX{
+    margin-right:5px;
+}
+.playerO{
+    margin-left:5px;
+}
+.selectbox .credit{
+    text-align:center;
+    margin-top:20px;
+    font-size:18px;
+    font-weight:500;
+}
+.select-box .credit a{
+    color:#56baed;
+    text
 }
 
