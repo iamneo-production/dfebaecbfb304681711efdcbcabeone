@@ -13,3 +13,8 @@
     color:#fff;
     background:#56baed;
 }
+.select-box,.play-board,.result-box{
+    position:absolute;
+    top:50%
+    
+}
