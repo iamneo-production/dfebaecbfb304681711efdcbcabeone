@@ -79,6 +79,30 @@
 }
 .select-box .credit a{
     color:#56baed;
-    text
+    text-decoration:none;
 }
+.select-box .credit a{
+    color:#56baed;
+    text-decoration:none;
+}
+.select-box .credit a:hover{
+    text-decoration:underline;
+}
+.playboard{
+    opacity:0;
+    pointer-events:none;
+    transform:translate(-50%,-50%)
+    scale(0.9);
+}
+.playboard.show{
+    opacity:1;
+    pointer-events:auto;
+    transform:translate(-50%,-50%)
+    scale(1);
+}
+.playboard.details{
+    padding:
+}
+
+
 
