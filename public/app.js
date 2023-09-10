@@ -1,8 +1,8 @@
-// Initial game state
 let cells = ['', '', '', '', '', '', '', '', ''];
 let currentPlayer = 'X';
 let result = document.querySelector('.result');
-let btns = document.querySelectorAll('.btn');
+let cellsButtons = document.querySelectorAll('.btn');
+let resetButton = document.querySelector('#reset');
 let conditions = [
     [0, 1, 2],
     [3, 4, 5],
@@ -13,6 +13,7 @@ let conditions = [
     [0, 4, 8],
     [2, 4, 6]
 ];
+
 const ticTacToe = (index) => { 
 
     if (cells[index] !== '' || result.textContent.includes('wins')) return;
