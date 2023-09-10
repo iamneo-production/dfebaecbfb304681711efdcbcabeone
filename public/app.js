@@ -16,17 +16,17 @@ let conditions = [
 
 const ticTacToe = (index) => { 
 
-    if (cells[index] !== '' || result.textContent.includes('wins')) return;
+    if (cells[index] !== '' || result.textContent.includes('won')) return;
     
     cells[index] = currentPlayer;
-    cellsButtons[index].value = currentPlayer;
+    cellsButtons[index].value = Player;
     cellsButtons[index].disabled = true;
 
    
     for (const condition of conditions) {
         const [a, b, c] = condition;
         if (cells[a] && cells[a] === cells[b] && cells[a] === cells[c]) {
-            result.textContent = `${currentPlayer} wins!`;
+            result.textContent = `${currentPlayer} won 🎉`;
             return; 
         }
     }
@@ -36,7 +36,7 @@ const ticTacToe = (index) => {
         return;}
 
     currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
-    result.textContent = `Current Player: ${currentPlayer}`;
+    result.textContent = `: ${currentPlayer}`;
 };
 
 const resetGame = () => {
