@@ -36,7 +36,7 @@ const ticTacToe = (index) => {
         return;}
 
     Player = Player === 'X' ? 'O' : 'X';
-    result.textContent = `: ${Player}`;
+    result.textContent = `Player : ${Player}`;
 };
 
 const resetGame = () => {
