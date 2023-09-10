@@ -1,5 +1,5 @@
 let cells = ['', '', '', '', '', '', '', '', ''];
-let currentPlayer = 'X';
+let Player = 'X';
 let result = document.querySelector('.result');
 let cellsButtons = document.querySelectorAll('.btn');
 let resetButton = document.querySelector('#reset');
@@ -18,7 +18,7 @@ const ticTacToe = (index) => {
 
     if (cells[index] !== '' || result.textContent.includes('won')) return;
     
-    cells[index] = currentPlayer;
+    cells[index] = Player;
     cellsButtons[index].value = Player;
     cellsButtons[index].disabled = true;
 
@@ -26,7 +26,7 @@ const ticTacToe = (index) => {
     for (const condition of conditions) {
         const [a, b, c] = condition;
         if (cells[a] && cells[a] === cells[b] && cells[a] === cells[c]) {
-            result.textContent = `${currentPlayer} won 🎉`;
+            result.textContent = `${Player} won 🎉`;
             return; 
         }
     }
@@ -35,14 +35,14 @@ const ticTacToe = (index) => {
         result.textContent = "It's a draw!";
         return;}
 
-    currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
-    result.textContent = `: ${currentPlayer}`;
+    Player = Player === 'X' ? 'O' : 'X';
+    result.textContent = `: ${Player}`;
 };
 
 const resetGame = () => {
     cells = ['', '', '', '', '', '', '', '', ''];
-    currentPlayer = 'X';
-    result.textContent = 'Current Player: X';
+    Player = 'X';
+    result.textContent = 'Player X Turn';
 
     cellsButtons.forEach((button) => {
         button.value = '';
